@@ -1,0 +1,22 @@
+name: sudoku-solver
+
+version: git
+
+summary: A CLI tool to solve sudoku puzzles
+
+description: |
+  sudoku-solver is a command line program for solving sudoku puzzles,
+  which can be input manually or from a plaintext file.
+
+confinement: devmode
+
+base: core18
+
+parts:
+  sudoku-solver:
+    plugin: rust
+    source: .
+
+apps:
+  sudoku-solver:
+    command: bin/sudoku-solver
